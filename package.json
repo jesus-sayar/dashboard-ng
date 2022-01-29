@@ -6,8 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "build": "rm -rf build && cd ./client && npm run build --prod && cp -r dist/dashboard ../build"
+    "heroku-postbuild": "ng build --prod"
+
   },
+  "engines": { "node": "16.13.2", "npm": "8.1.2" },
   "author": "",
   "license": "ISC",
   "dependencies": {
