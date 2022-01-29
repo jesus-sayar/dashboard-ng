@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "heroku-postbuild": "ng build --prod"
-
+    "heroku-postbuild": "rm -rf build && cd ./client && ng build --prod && cp -r dist/dashboard ../build"
   },
   "engines": { "node": "16.13.2", "npm": "8.1.2" },
   "author": "",
